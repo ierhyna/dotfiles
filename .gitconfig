@@ -1,0 +1,14 @@
+[push]
+	default = simple
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+	br = branch
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	last = log -1 HEAD
+	visual = !gitk
+[color]
+	ui = always
+[include]
+  path = ~/.dotfiles/.gitconfig_local
