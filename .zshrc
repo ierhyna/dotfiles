@@ -81,8 +81,11 @@ PROMPT='%F{cyan}%~%F{black}${vcs_info_msg_0_}
 %F{magenta}${PROMPT_SYMBOL:-❯}%f '
 
 # Enable colors
+autoload colors
+colors
+
 export CLICOLOR=1
-export LSCOLORS=exFxBxDxCxegedabagacad
+export LSCOLORS=exfxbxdxcxegedabagacad
 
 # Use colors for ls by default
 alias ls='ls -GFh'
