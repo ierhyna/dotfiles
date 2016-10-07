@@ -5,10 +5,15 @@
   ci = commit
   co = checkout
   br = branch
-  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
   last = log -1 HEAD
   visual = !gitk
+  pushup = "!git push --set-upstream origin $(git symbolic-ref --short HEAD)"
+  unstage = reset HEAD --
 [color]
   ui = always
+[core]
+  autocrlf = input
+  safecrlf = true
 [include]
   path = ~/.dotfiles/.gitconfig_local
