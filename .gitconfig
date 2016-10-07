@@ -11,7 +11,7 @@
   pushup = "!git push --set-upstream origin $(git symbolic-ref --short HEAD)"
   unstage = reset HEAD --
 [color]
-  ui = always
+  ui = true
 [core]
   autocrlf = input
   safecrlf = true
