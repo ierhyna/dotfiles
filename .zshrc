@@ -1,5 +1,8 @@
-# Setup history
+#
+# HISTORY
+#
 
+# Set history size and file
 HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=~/.zsh_history
@@ -12,6 +15,39 @@ setopt EXTENDED_HISTORY
 # and also causes your typed commands to be appended
 # to the history file
 setopt SHARE_HISTORY
+
+# Append history instead of overwriting
+# multiple parallel sessions will all have the new entries
+# from their history lists added to the history file,
+# in the order that they exit
+setopt APPEND_HISTORY
+
+#
+# COMPLETION
+#
+
+# Enable completion
+autoload -U compinit
+compinit -C
+
+# Do not autoselect the first completion entry
+unsetopt MENU_COMPLETE
+
+# Show autocomplete menu on second Tab press
+setopt AUTO_MENU
+
+# Tab completion from both ends
+setopt COMPLETE_IN_WORD
+
+# Case- and hypen-insensetive tab completion
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z-_}={A-Za-z_-}' 'r:|=*' 'l:|=* r:|=*'
+
+# Highlight completion choices
+zstyle ':completion:*' menu select
+
+#
+# PROMPT
+#
 
 # Load version control system addon
 autoload -Uz vcs_info
