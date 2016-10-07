@@ -1,0 +1,9 @@
+# ls by default:
+# -G use colors
+# -F indicate types
+# -h use unit suffixes with -l
+alias ls='ls -GFh'
+
+alias ll="ls -lA" # Table view
+alias la="ls -A" # Show hidden files
+alias vim="/usr/local/bin/vim" # vim

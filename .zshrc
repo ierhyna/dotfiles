@@ -87,16 +87,5 @@ colors
 export CLICOLOR=1
 export LSCOLORS=exfxbxdxcxegedabagacad
 
-#
 # ALIASES
-#
-
-# By default:
-# -G use colors
-# -F indicate types
-# -h use unit suffixes with -l
-alias ls='ls -GFh'
-# Table view
-alias ll="ls -lA"
-# Show hidden files
-alias la="ls -A"
+source $HOME/.dotfiles/.zsh_aliases
