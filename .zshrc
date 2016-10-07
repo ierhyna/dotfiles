@@ -1,7 +1,17 @@
 # Setup history
+
 HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=~/.zsh_history
+
+# Save each command’s beginning timestamp
+# (in seconds since the epoch) and the duration (in seconds)
+setopt EXTENDED_HISTORY
+
+# This option both imports new commands from the history file,
+# and also causes your typed commands to be appended
+# to the history file
+setopt SHARE_HISTORY
 
 # Load version control system addon
 autoload -Uz vcs_info
