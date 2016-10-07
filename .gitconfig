@@ -15,5 +15,6 @@
 [core]
   autocrlf = input
   safecrlf = true
+	excludesfile = ~/.gitignore_global
 [include]
   path = ~/.dotfiles/.gitconfig_local
