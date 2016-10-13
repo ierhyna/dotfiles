@@ -93,5 +93,6 @@ source $HOME/.dotfiles/.zsh_aliases
 # EXPORTS
 # nvm
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+source $(brew --prefix nvm)/nvm.sh
+
 export PATH="/usr/local/sbin:$PATH"
