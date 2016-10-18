@@ -91,8 +91,14 @@ export LSCOLORS=exfxbxdxcxegedabagacad
 source $HOME/.dotfiles/.zsh_aliases
 
 # EXPORTS
+export PATH="/usr/local/sbin:$PATH"
+
 # nvm
 export NVM_DIR="$HOME/.nvm"
 source $(brew --prefix nvm)/nvm.sh
 
-export PATH="/usr/local/sbin:$PATH"
+export PATH="$HOME/.yarn/bin:$PATH" # Trying Yarn
+export PATH="$(brew --prefix homebrew/php/php70)/bin:$PATH" # CLI PHP
+
+# activate zsh-completions
+fpath=(/usr/local/share/zsh-completions $fpath)
