@@ -18,3 +18,5 @@
   excludesfile = ~/.dotfiles/.gitignore_global
 [include]
   path = ~/.dotfiles/.gitconfig_local
+[merge]
+  ff = false
