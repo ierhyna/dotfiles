@@ -97,7 +97,10 @@ export PATH="/usr/local/sbin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 source $(brew --prefix nvm)/nvm.sh
 
-export PATH="$HOME/.yarn/bin:$PATH" # Trying Yarn
+export PATH="$HOME/.yarn/bin:$PATH"
 
 # activate zsh-completions
 fpath=(/usr/local/share/zsh-completions $fpath)
+
+# added by travis gem
+[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
