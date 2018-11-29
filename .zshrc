@@ -92,12 +92,16 @@ source $HOME/.dotfiles/.zsh_aliases
 
 # EXPORTS
 export PATH="/usr/local/sbin:$PATH"
+export PATH="$PATH:$HOME/mongodb-osx-x86_64-enterprise-3.6.3/bin"
+export GOPATH=$PATH:/usr/local/opt/go/libexec/bin
+export PYTHONPATH=$PATH:/usr/local/bin/python3
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
 source $(brew --prefix nvm)/nvm.sh
 
-export PATH="$HOME/.yarn/bin:$PATH"
+# export PATH="$HOME/.yarn/bin:$PATH"
+export PATH="$PATH:`yarn global bin`"
 
 # activate zsh-completions
 fpath=(/usr/local/share/zsh-completions $fpath)
